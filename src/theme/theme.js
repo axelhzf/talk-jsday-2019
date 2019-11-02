@@ -1,6 +1,5 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
-import { colors } from './colors';
 import { syntaxHighlighterPrism, future } from '@mdx-deck/themes';
 import { prismTheme } from './prismTheme';
 
@@ -74,6 +73,7 @@ export function ThemeGlobal() {
   return (
     <Global
       styles={css`
+        @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400&display=swap');
         html {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;

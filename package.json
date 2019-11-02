@@ -9,18 +9,12 @@
     "@rebass/emotion": "^3.1.1",
     "mdx-deck": "^2.5.0",
     "prism-react-renderer": "^0.1.7",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "react-syntax-highlighter": "^11.0.2",
     "react-twitter-embed": "^2.0.8"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1",
     "prettier": "^1.18.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "start": "mdx-deck src/presentation.mdx",
