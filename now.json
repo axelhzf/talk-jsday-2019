@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "alias": "talk-jsday-2019.axelhzf.com",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "assets/$1" },
+    { "src": "/(.*)\\.js", "dest": "$1.js" },
+    { "src": "/(.*)", "dest": "index.html" }
+  ]
+}

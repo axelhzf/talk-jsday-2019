@@ -1,0 +1,32 @@
+{
+  "name": "talk-jsday-2019",
+  "private": true,
+  "description": "",
+  "version": "1.0.0",
+  "author": "Axel Hernandez <axel.hernandez.ferrera@ibm.com>",
+  "dependencies": {
+    "@emotion/styled": "^10.0.14",
+    "@rebass/emotion": "^3.1.1",
+    "mdx-deck": "^2.5.0",
+    "prism-react-renderer": "^0.1.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-syntax-highlighter": "^11.0.2",
+    "react-twitter-embed": "^2.0.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck src/presentation.mdx",
+    "clean": "rm -rf dist",
+    "build": "mdx-deck build --d dist src/presentation.mdx && cp -r src/assets dist",
+    "deploy": "now --target production",
+    "format": "prettier --write src/**/*.{js,jsx,mdx}"
+  }
+}
