@@ -1,10 +1,584 @@
 import { theme as t } from './theme/theme';
 import { Tweet } from './components/Tweet';
 import { Image, Flex, Box } from '@rebass/emotion';
-import { Split } from 'mdx-deck/layouts';
+import { Split,  } from 'mdx-deck/layouts';
 import { Reference } from './components/Reference';
+import { Video } from './components/Video';
+import { Center } from './components/Center';
 
 export const theme = t;
 
-# Node is Dead
-# Long Live Deno
+<Center>
+  <Flex alignItems="center">
+
+  <Box flex="1" mr="5">
+    <Image src="./assets/deno_logo_4.gif" />
+  </Box>
+
+  <Box>
+
+  # Node is Dead, <br/> Long Live Deno
+
+  </Box>
+
+  </Flex>
+
+  Axel Hernández Ferrera
+  [@axelhzf](http://twitter.com/axelhzf)
+
+</Center>
+
+---
+
+## But first, let's talk about **JavaScript Fatigue**
+
+---
+
+<Center>
+  <Tweet id="1189429852270747648" />
+</Center>
+
+---
+
+## A new day, a new JavaScript framework
+
+---
+
+## But, is this really true?
+
+---
+
+<Center>
+  <Tweet id="1188271195671744513" />
+</Center>
+
+---
+
+<Center>
+  <Tweet id="1189429852270747648" />
+</Center>
+
+---
+
+<Center>
+
+<Image src="./assets/iknowthatfeel.jpeg" />
+
+### I have been there, I feel your pain
+
+</Center>
+
+---
+
+## Be updated on the JavaScript community can be **frustrating**
+
+---
+
+## Developers like to **reinvent the wheel** constantly
+
+---
+
+## Can we see the JavaScript Fatigue with a **positive perspective**?
+
+---
+
+# Innovation
+
+---
+
+### Types of improvements
+
+- **User facing** improvements
+- **Developer experience** improvements
+
+---
+
+## **Nobody** is going to say that you application is awesome because you are using hooks
+
+---
+
+### We need to deal with **FOMO** (Fear Of Missing Out)
+
+---
+
+<Center>
+<Tweet id="1187786961353953283" />
+</Center>
+
+---
+
+## Hey Axel, why are you talking about this? I came here to listen about Deno
+
+---
+
+## I want you to have a **positive perspective** of the Fatigue
+
+*(at least during this talk)*
+
+---
+
+## I know **this talk** can produce some JavaScript Fatigue
+
+---
+
+## Deno is the **first real competitor** of Node
+
+---
+
+## Deno is a **secure runtime for JavaScript and TypeScript**
+
+---
+
+#### About the talk title...
+
+## Node is Dead, Long Live Deno
+
+---
+
+## Sorry, that title was pure **clickbait**
+
+---
+
+## Don't worry, **Node is not dead**
+
+- Node is not going anywhere
+- Deno is not production ready yet
+- Deno does not have a stable version yet
+
+---
+
+## The man behind Deno: **Ryan Dhal**
+
+<Split>
+<Box mr="5">
+
+- Creator of Node in 2009
+- Leave Node in 2012
+- Presented Deno in 2018: **"10 Things I Regret About Node.js"**
+
+</Box>
+<Image src="./assets/ryan.jpg" />
+</Split>
+
+<Reference href="https://www.youtube.com/watch?v=M3BM9TB-8yA&vl=en">
+  10 Things I Regret About Node.js - Ryan Dahl - JSConf EU
+</Reference>
+
+---
+
+## Design flaws vs his is how it works
+
+---
+
+## JavaScript has **changed a lot** since Node creation
+
+- Promises and async/await
+- Module System
+- TypeScript
+
+---
+
+## Promises and async/await
+
+---
+
+## Sadly, callbacks are still a thing
+
+---
+
+<Image src="./assets/node-promises.png" />
+
+<Reference href="https://github.com/nodejs/node/issues/4596">
+  Introducing Promises to node core?
+</Reference>
+
+---
+
+<Center>
+
+## Things are improving
+
+```
+// Since Node 10
+const fs = require('fs').promises;
+```
+
+</Center>
+
+---
+
+<Center>
+
+## But they are not perfect yet
+
+```
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+
+async function lsExample() {
+  const { stdout, stderr } = await exec('ls');
+  console.log('stdout:', stdout);
+  console.error('stderr:', stderr);
+}
+lsExample();
+```
+
+</Center>
+
+---
+
+<Center>
+
+## in Deno every async API use Promises
+
+```
+const p = Deno.run({ args: ["echo", "hello"] });
+await p.status(); // await its completion
+```
+
+</Center>
+
+---
+
+## Module System
+
+- ES Modules didn't exist when Node was designed
+- They created CommonJS
+
+---
+
+<Center>
+
+#### ES Modules in Node is taking a long time
+
+<Image src="./assets/node-modules.png" style={{ maxHeight: "50vh" }} />
+
+<Reference href="https://github.com/nodejs/modules/blob/master/doc/plan-for-new-modules-implementation.md">
+  Plan for New Modules Implementation in Node
+</Reference>
+
+</Center>
+
+---
+
+## Deno **Module System**
+
+---
+
+<Center>
+
+## Imports can be relative or urls
+
+```
+import { awesomeFun } from "./awesomeLib";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+```
+
+</Center>
+
+---
+
+## When importing from a URL
+
+- Deno will download the file and store it in a local cache
+- Next time the program is executed it will use the cache version
+- You can use a flag `--reload` to have a fresh copy of the dependency
+
+---
+
+## This looks like a small change, but it has a **lot of implications**
+
+- No more `package.json` to declare the dependencies
+- Simplify the whole resolution algorithm
+- We are **not forced to use NPM anymore**, we can publish our code in our own servers
+
+---
+
+### What is the relationship between Node and NPM?
+
+---
+
+## NPM is a **private company** that has the **control over the public registry**
+
+---
+
+## From time to time companies remind use that their **main goal is to earn money**
+
+---
+
+<Center style={{ background: '#fff' }}>
+  <Image src="./assets/medium.png" width="50%" />
+</Center>
+
+---
+
+<Center style={{ background: '#fff' }}>
+  <Image src="./assets/githubIce.png" width="50%" />
+</Center>
+
+<Reference href="https://www.theverge.com/2019/10/9/20906213/github-ice-microsoft-software-email-contract-immigration-nonprofit-donation">The Verge</Reference>
+
+
+---
+
+<Center style={{ background: '#fff' }}>
+  <Image src="./assets/npm2.png" style={{ height: '80vh' }}/>
+</Center>
+
+<Reference href="https://www.theregister.co.uk/2019/04/22/npm_fired_staff_union_complaints/">The Register</Reference>
+
+---
+
+## CJ Silverio: The Economics of Package Management
+
+- **Open source generates** a lot of value
+- Most of us give away source code not expecting money
+- Our common registry of shared code is owned by a private company
+- Packages cost money even if you are not paying for them
+- **Companies don't love** you not even ones that makes things you like
+- NPM is obligated to its owners not us
+
+<Reference href="https://www.youtube.com/watch?v=MO8hZlgK5zc">
+  CJ Silverio: The Economics of Package Management on Youtube
+</Reference>
+
+---
+
+### Entropic: A Federated Package Registry for Anything
+
+https://github.com/entropic-dev/entropic
+
+---
+
+<Image src="./assets/manyverse.png" />
+
+<Reference href="https://manyver.se/">Manyverse</Reference>
+
+---
+
+<Center>
+
+## Pied Piper
+
+<Video src="./assets/pied-piper.mp4" />
+
+</Center>
+
+---
+
+<Center>
+
+## Deno Module System is an elegant solution to the centralization problem
+
+```
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+// is very similar to how the web works
+
+<script src="https://deno.land/std/testing/asserts.ts"></script>
+```
+
+</Center>
+
+---
+
+## Security
+
+- V8 is a **secure sandbox**
+- Node removes those security capabilities
+
+---
+
+## event-stream vulnerability
+
+- `event-stream` is a popular package created by `dominictarr`.
+- He doesn't have time to maintain the package
+- `dominictarr` gave `right9ctrl` access on GitHub and npm
+- `right9ctrl` pushed some regular commits
+- `right9ctrl` added a dependency `flatmap-stream`, published a version to npm, and then removed the dependency
+- The dependency was designed to tried to steal you bitconins wallet
+
+<Reference href="https://schneider.dev/blog/event-stream-vulnerability-explained">
+  event-stream vulnerability explained
+</Reference>
+
+---
+
+## Deno security
+
+- By default script run without any network or file system write access
+- Deno will prompt the user for access
+- Users can opt in via flags
+
+---
+
+<Center>
+
+### Deno security flags
+
+```
+--allow-env --allow-net --allow-read --allow-write --allow-run
+
+--allow-read=/tmp  --allow-net=google.com
+```
+
+</Center>
+
+---
+
+## TypeScript
+
+- Deno includes TypeScript support out of the sandbox
+- TypeScript is awesome
+  - I dislike guessing
+  - It gives your editor superpowers
+- Deno binary includes the TypeScript compiler (v8 snapshot to improve performance)
+- Deno core is writen is TypeScript
+
+---
+
+<Center>
+
+### You can import ts dependencies directly
+
+```
+import { pad } from "https://deno.land/std/strings/pad.ts";
+
+pad("deno", 6, { char: "*", side: "left" });
+```
+
+</Center>
+
+---
+
+## STD Library
+
+<Split>
+
+<div>
+
+- Node has a very small core
+- This can lead to to micropackages
+- Many libraries implement the same functionality
+
+</div>
+
+<Tweet id="1189621985631965184" />
+
+</Split>
+
+---
+
+## Deno Standard Modules (deno_std)
+
+- Deno has a std library
+- Versioned with the binary, but not included
+
+```
+import { v4 } from "https://deno.land/std/uuid/mod.ts"
+const uuid = v4();
+```
+
+---
+
+## Deno std
+
+<Split>
+<div>
+
+- colors
+- datetime
+- examples
+- flags
+- fs
+- http
+- log
+
+</div>
+<div>
+
+- media_types
+- prettier
+- strings
+- testing
+- toml
+- ws
+- ...
+
+</div>
+</Split>
+
+<Reference href="https://deno.land/std/">deno_std</Reference>
+
+---
+
+<Center>
+
+## Deno full toolset
+
+```
+deno fmt (format files, using prettier)
+deno test (run tests)
+deno install (similar npm install --global)
+deno bundle (generate a single .js including all dependencies)
+deno eval (eval a script)
+deno xeval (eval a script based on text segments from stdin)
+x deno compile (build a single binary distributable)
+x deno lint
+```
+
+</Center>
+
+---
+
+## Browser compatibility
+
+- Deno tries to be compatible with the browser where is possible
+- e.g. Deno uses `window` as global variable instead of Node's `global`.
+
+```
+> window
+{ Deno, queueMicrotask, window, atob, btoa, fetch, clearTimeout,
+ clearInterval, setTimeout, setInterval, location, onload, onunload, crypto,
+ Blob, File, CustomEvent, Event, EventTarget, URL, URLSearchParams, ...
+```
+
+---
+
+<Center>
+
+## How does this work internally
+
+<Image src="./assets/deno-internal.png" />
+
+</Center>
+
+---
+
+<Center>
+
+## Benchmarks
+
+<Image src="./assets/benchmarks.png" style={{ maxHeight: '50vh' }}/>
+
+</Center>
+
+<Reference href="https://deno.land/benchmarks.html">Deno Benchmarks</Reference>
+
+---
+
+## Conclusion
+
+- Deno has some interesting features
+- Should I start using Deno right now? Only if you want to experiment with something new
+- Node is not going anywhere anytime soon
+
+---
+
+<Center>
+
+# Questions?
+
+[@axelhzf](http://twitter.com/axelhzf)
+
+</Center>

@@ -6,28 +6,25 @@ import { prismTheme } from './prismTheme';
 
 export const theme = syntaxHighlighterPrism({
   ...future,
-  font: `'IBM Plex Sans', Arial, sans`,
+  font: `"SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;`,
   colors: {
-    background: '#ffffff',
+    background: '#FCF5F3',
     blue: '#0062ff',
-    code: '#0062ff',
-    link: '#6ea6ff',
+    code: '#333',
+    link: '#FF7D4D',
     pre: '#0af',
     preBackground: '#000',
-    text: '#171717',
-    primary: '#0062ff',
+    text: '#111',
+    primary: '#FF7D4D',
     ui5: '#171717'
   },
   heading: {
-    fontWeight: 400,
-    color: '#171717',
-    textAlign: 'center',
+    fontWeight: 600,
+    color: '#111',
+    textAlign: 'left',
     marginTop: 0,
     paddingLeft: '1rem',
-    paddingRight: '1rem',
-    letterSpacing: 'normal',
-    textDecoration: 'underline',
-    textDecorationColor: colors.blue30
+    paddingRight: '1rem'
   },
   ul: {
     alignSelf: 'flex-start',
@@ -35,16 +32,32 @@ export const theme = syntaxHighlighterPrism({
   },
   h1: {
     textDecoration: 'underline',
-    textDecorationColor: colors.blue30,
-    textTransform: 'uppercase'
+    textDecorationColor: '#FF7D4D',
+    textTransform: 'none'
+  },
+  h2: {
+    maxWidth: '90%'
   },
   pre: {
     display: 'inline-block'
+  },
+  p: {
+    textAlign: 'left'
+  },
+  em: {
+    color: '#333'
   },
   blockquote: {
     textAlign: 'left',
     borderLeft: '0.5rem solid #ccc',
     paddingLeft: '2rem'
+  },
+  Slide: {
+    padding: '10vh 10vw',
+    alignItems: 'flex-start'
+  },
+  Root: {
+    width: '100%'
   },
   prism: { style: prismTheme },
   Provider({ children }) {
@@ -61,13 +74,26 @@ export function ThemeGlobal() {
   return (
     <Global
       styles={css`
-        @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600,700&display=swap');
-        @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400&display=swap');
-
         html {
-          text-rendering: optimizeLegibility;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
+        }
+
+        strong {
+          text-decoration: underline;
+          text-decoration-color: #ff7d4d;
+        }
+
+        :not(pre) > code {
+          display: inline-block;
+          background: #fde9e1;
+          padding: 2px 3px;
+          margin: 4px 0;
+          border-radius: 8px;
+        }
+
+        div[role='group'] {
+          width: 100%;
         }
       `}
     />
