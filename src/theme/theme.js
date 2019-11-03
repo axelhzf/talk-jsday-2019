@@ -62,11 +62,14 @@ export const theme = syntaxHighlighterPrism({
     width: '100%'
   },
   prism: { style: prismTheme },
-  Provider({ children }) {
+  Provider(props) {
+    React.useEffect(() => {
+      ga('send', 'pageview', location.pathname);
+    }, [props.index]);
     return (
       <>
         <ThemeGlobal />
-        <>{children}</>
+        <>{props.children}</>
         <Analytics/>
       </>
     );
