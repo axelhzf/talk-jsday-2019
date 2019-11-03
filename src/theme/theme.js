@@ -41,7 +41,9 @@ export const theme = syntaxHighlighterPrism({
     display: 'inline-block'
   },
   p: {
-    textAlign: 'left'
+    textAlign: 'left',
+    paddingLeft: '1rem',
+    paddingRight: '1rem'
   },
   em: {
     color: '#333'
@@ -77,6 +79,10 @@ export function ThemeGlobal() {
         html {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
+        }
+
+        em {
+          color: #555;
         }
 
         strong {

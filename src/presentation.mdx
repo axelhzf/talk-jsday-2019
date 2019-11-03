@@ -62,7 +62,7 @@ export const theme = t;
 
 <Center>
 
-<Image src="./assets/iknowthatfeel.jpeg" />
+<Image src="./assets/iknowthatfeel.jpeg" style={{ marginBottom: 30 }} />
 
 ### I have been there, I feel your pain
 
@@ -93,7 +93,7 @@ export const theme = t;
 
 ---
 
-## **Nobody** is going to say that you application is awesome because you are using hooks
+## **Nobody** is going to say that your application is awesome because you are using hooks
 
 ---
 
@@ -209,6 +209,19 @@ const fs = require('fs').promises;
 
 <Center>
 
+## Async functions are getting faster
+
+  <Image src="./assets/v8-faster-promises.png" style={{maxHeight: '50vh' }} />
+
+</Center>
+
+<Reference href="https://v8.dev/blog/fast-async">Faster async functions and promises</Reference>
+
+---
+
+
+<Center>
+
 ## But they are not perfect yet
 
 ```
@@ -302,7 +315,7 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
 ---
 
-## From time to time companies remind use that their **main goal is to earn money**
+## From time to time companies remind us that their **main goal is to earn money**
 
 ---
 
@@ -335,7 +348,7 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 - Most of us give away source code not expecting money
 - Our common registry of shared code is owned by a private company
 - Packages cost money even if you are not paying for them
-- **Companies don't love** you not even ones that makes things you like
+- **Companies don't love you**. Not even ones that makes things you like
 - NPM is obligated to its owners not us
 
 <Reference href="https://www.youtube.com/watch?v=MO8hZlgK5zc">
@@ -356,13 +369,7 @@ https://github.com/entropic-dev/entropic
 
 ---
 
-<Center>
-
-## Pied Piper
-
-<Video src="./assets/pied-piper.mp4" />
-
-</Center>
+<Video src="./assets/pied-piper.mp4" style={{ width: '100vw', height: '100vh', position: 'absolute', top: 0, left: 0 }} />
 
 ---
 
@@ -396,7 +403,7 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 - `dominictarr` gave `right9ctrl` access on GitHub and npm
 - `right9ctrl` pushed some regular commits
 - `right9ctrl` added a dependency `flatmap-stream`, published a version to npm, and then removed the dependency
-- The dependency was designed to tried to steal you bitconins wallet
+- The dependency was designed to tried to steal bitconins wallet
 
 <Reference href="https://schneider.dev/blog/event-stream-vulnerability-explained">
   event-stream vulnerability explained
@@ -417,9 +424,24 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 ### Deno security flags
 
 ```
---allow-env --allow-net --allow-read --allow-write --allow-run
+--allow-env
+--allow-net
+--allow-read
+--allow-write
+--allow-run
+```
 
---allow-read=/tmp  --allow-net=google.com
+</Center>
+
+---
+
+<Center>
+
+### Deno security flags
+
+```
+--allow-read=/tmp
+--allow-net=google.com
 ```
 
 </Center>
@@ -430,7 +452,7 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
 - Deno includes TypeScript support out of the sandbox
 - TypeScript is awesome
-  - I dislike guessing
+  - I don't like guessing object shapes
   - It gives your editor superpowers
 - Deno binary includes the TypeScript compiler (v8 snapshot to improve performance)
 - Deno core is writen is TypeScript
@@ -466,6 +488,19 @@ pad("deno", 6, { char: "*", side: "left" });
 <Tweet id="1189621985631965184" />
 
 </Split>
+
+---
+
+<Center>
+
+## Micropackages
+
+<Video src="./assets/micropackages.mp4" />
+
+</Center>
+
+
+<Reference href="https://twitter.com/artemtam/status/1180904115183984640">https://twitter.com/artemtam/status/1180904115183984640</Reference>
 
 ---
 
