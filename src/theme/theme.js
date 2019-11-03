@@ -2,6 +2,7 @@ import React from 'react';
 import { Global, css } from '@emotion/core';
 import { syntaxHighlighterPrism, future } from '@mdx-deck/themes';
 import { prismTheme } from './prismTheme';
+import { Analytics } from '../components/Analytics';
 
 export const theme = syntaxHighlighterPrism({
   ...future,
@@ -66,6 +67,7 @@ export const theme = syntaxHighlighterPrism({
       <>
         <ThemeGlobal />
         <>{children}</>
+        <Analytics/>
       </>
     );
   }
