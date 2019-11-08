@@ -23,6 +23,8 @@ export const theme = t;
 
   </Flex>
 
+
+  [https://talk-jsday-2019.axelhzf.com](https://talk-jsday-2019.axelhzf.com)<br/>
   Axel Hernández Ferrera
   [@axelhzf](http://twitter.com/axelhzf)
 
@@ -34,17 +36,8 @@ export const theme = t;
 
 ---
 
-<Center>
-  <Tweet id="1189429852270747648" />
-</Center>
 
----
-
-## A new day, a new JavaScript framework
-
----
-
-## But, is this really true?
+### There was a time when there was a new JavaScript library every day
 
 ---
 
@@ -54,27 +47,33 @@ export const theme = t;
 
 ---
 
-<Center>
-  <Tweet id="1189429852270747648" />
-</Center>
+## Developers like to **reinvent the wheel** constantly
+
+---
+
+## React
+
+- Class Components, Function Components
+- Mixins, High order components, Render props, hooks
+- CSS, SCSS, CSS-in-JS
+- Flux, Redux, Redux-Sagas, MobX, Context
+- Suspense
 
 ---
 
 <Center>
-
-<Image src="./assets/iknowthatfeel.jpeg" style={{ marginBottom: 30 }} />
-
-### I have been there, I feel your pain
-
+  <Tweet id="1191487522704113666"/>
 </Center>
+
+---
+
+## This does not happen only in React
+
+*(I can wait to start using the Composition Api in Vue and remove all the mixins)*
 
 ---
 
 ## Be updated on the JavaScript community can be **frustrating**
-
----
-
-## Developers like to **reinvent the wheel** constantly
 
 ---
 
@@ -93,7 +92,7 @@ export const theme = t;
 
 ---
 
-## **Nobody** is going to say that your application is awesome because you are using hooks
+## **Nobody** is going to say that your application is awesome because you are using React
 
 ---
 
@@ -101,17 +100,11 @@ export const theme = t;
 
 ---
 
-<Center>
-<Tweet id="1187786961353953283" />
-</Center>
-
----
-
 ## Hey Axel, why are you talking about this? I came here to listen about Deno
 
 ---
 
-## I want you to have a **positive perspective** of the Fatigue
+## I want you to have a **positive perspective** of the JavaScript Fatigue
 
 *(at least during this talk)*
 
@@ -122,10 +115,6 @@ export const theme = t;
 ---
 
 ## Deno is the **first real competitor** of Node
-
----
-
-## Deno is a **secure runtime for JavaScript and TypeScript**
 
 ---
 
@@ -147,13 +136,17 @@ export const theme = t;
 
 ---
 
+## Deno is a **secure runtime for JavaScript and TypeScript**
+
+---
+
 ## The man behind Deno: **Ryan Dhal**
 
 <Split>
 <Box mr="5">
 
 - Creator of Node in 2009
-- Leave Node in 2012
+- Left Node in 2012
 - Presented Deno in 2018: **"10 Things I Regret About Node.js"**
 
 </Box>
@@ -164,17 +157,10 @@ export const theme = t;
   10 Things I Regret About Node.js - Ryan Dahl - JSConf EU
 </Reference>
 
----
-
-## Design flaws vs his is how it works
 
 ---
 
 ## JavaScript has **changed a lot** since Node creation
-
-- Promises and async/await
-- Module System
-- TypeScript
 
 ---
 
@@ -183,14 +169,6 @@ export const theme = t;
 ---
 
 ## Sadly, callbacks are still a thing
-
----
-
-<Image src="./assets/node-promises.png" />
-
-<Reference href="https://github.com/nodejs/node/issues/4596">
-  Introducing Promises to node core?
-</Reference>
 
 ---
 
@@ -204,18 +182,6 @@ const fs = require('fs').promises;
 ```
 
 </Center>
-
----
-
-<Center>
-
-## Async functions are getting faster
-
-  <Image src="./assets/v8-faster-promises.png" style={{maxHeight: '50vh' }} />
-
-</Center>
-
-<Reference href="https://v8.dev/blog/fast-async">Faster async functions and promises</Reference>
 
 ---
 
@@ -283,7 +249,7 @@ await p.status(); // await its completion
 ## Imports can be relative or urls
 
 ```
-import { awesomeFun } from "./awesomeLib";
+import { awesomeFunction } from "./awesomeLib.js";
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 ```
 
@@ -323,13 +289,7 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
   <Image src="./assets/medium.png" width="50%" />
 </Center>
 
----
-
-<Center style={{ background: '#fff' }}>
-  <Image src="./assets/githubIce.png" width="50%" />
-</Center>
-
-<Reference href="https://www.theverge.com/2019/10/9/20906213/github-ice-microsoft-software-email-contract-immigration-nonprofit-donation">The Verge</Reference>
+<Reference href="https://www.medium.com">Every post in medium not opened in incognito mode</Reference>
 
 
 ---
@@ -348,28 +308,11 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 - Most of us give away source code not expecting money
 - Our common registry of shared code is owned by a private company
 - Packages cost money even if you are not paying for them
-- **Companies don't love you**. Not even ones that makes things you like
 - NPM is obligated to its owners not us
 
 <Reference href="https://www.youtube.com/watch?v=MO8hZlgK5zc">
   CJ Silverio: The Economics of Package Management on Youtube
 </Reference>
-
----
-
-### Entropic: A Federated Package Registry for Anything
-
-https://github.com/entropic-dev/entropic
-
----
-
-<Image src="./assets/manyverse.png" />
-
-<Reference href="https://manyver.se/">Manyverse</Reference>
-
----
-
-<Video src="./assets/pied-piper.mp4" style={{ width: '100vw', height: '100vh', position: 'absolute', top: 0, left: 0 }} />
 
 ---
 
@@ -380,9 +323,34 @@ https://github.com/entropic-dev/entropic
 ```
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
-// is very similar to how the web works
+// it is very similar to how the web works
 
 <script src="https://deno.land/std/testing/asserts.ts"></script>
+```
+
+</Center>
+
+---
+
+## TypeScript
+
+- Deno includes TypeScript support out of the box
+- TypeScript is awesome
+  - I don't like guessing object shapes
+  - It gives your editor superpowers
+- Deno binary includes the TypeScript compiler
+- Deno core is writen is TypeScript
+
+---
+
+<Center>
+
+### You can import ts dependencies without transpile
+
+```
+import { pad } from "https://deno.land/std/strings/pad.ts";
+
+pad("deno", 6, { char: "*", side: "left" });
 ```
 
 </Center>
@@ -392,7 +360,7 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 ## Security
 
 - V8 is a **secure sandbox**
-- Node removes those security capabilities
+- Node doesn't use those security capabilities
 
 ---
 
@@ -413,7 +381,7 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
 ## Deno security
 
-- By default script run without any network or file system write access
+- By default script run without any network or file system access
 - Deno will prompt the user for access
 - Users can opt in via flags
 
@@ -440,33 +408,8 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 ### Deno security flags
 
 ```
---allow-read=/tmp
---allow-net=google.com
-```
-
-</Center>
-
----
-
-## TypeScript
-
-- Deno includes TypeScript support out of the sandbox
-- TypeScript is awesome
-  - I don't like guessing object shapes
-  - It gives your editor superpowers
-- Deno binary includes the TypeScript compiler (v8 snapshot to improve performance)
-- Deno core is writen is TypeScript
-
----
-
-<Center>
-
-### You can import ts dependencies without transpile
-
-```
-import { pad } from "https://deno.land/std/strings/pad.ts";
-
-pad("deno", 6, { char: "*", side: "left" });
+deno --allow-read=/tmp script1.ts
+deno --allow-net=google.com script2.ts
 ```
 
 </Center>
@@ -475,19 +418,9 @@ pad("deno", 6, { char: "*", side: "left" });
 
 ## STD Library
 
-<Split>
-
-<div>
-
 - Node has a very small core
 - This can lead to to micropackages
 - Many libraries implement the same functionality
-
-</div>
-
-<Tweet id="1189621985631965184" />
-
-</Split>
 
 ---
 
@@ -599,6 +532,22 @@ x deno lint
 </Center>
 
 <Reference href="https://deno.land/benchmarks.html">Deno Benchmarks</Reference>
+
+---
+
+
+
+<Center>
+
+# Try it now
+
+```
+brew install deno
+deno eval "console.log('hello world')"
+```
+
+
+</Center>
 
 ---
 

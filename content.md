@@ -3,9 +3,6 @@
 # JavaScript fatigue
 
 https://twitter.com/d4nidev/status/1189429852270747648?s=20
-
-> Tras casi 5 años usando @reactjs
- a nivel profesional, me estoy empezando a cansar de la evolución actual de la librería. Creo que deberíamos invertir nuestro tiempo en mejorar los productos que desarrollamos en lugar de aprender nuevas formas de hacer lo mismo cada pocos meses.
  
  Es una sensación bastante generalizada en el mundo de JavaScript. Seguro que todos hemos hecho la broma más de una vez de que todos los días sale un framework nuevo de JavaScript. Aunque puede que no sea del todo cierto.
 
@@ -13,12 +10,9 @@ https://twitter.com/adamdbradley/status/1188271195671744513?s=20
 
 React salió en 2013
 Vue en 2014
-
 Ha pasado bastante tiempo ya.
 
-
 https://twitter.com/d4nidev/status/1189429852270747648?s=20
-
 
 En tweet habla en concreto de los hooks de React(que casualmente fue el tema de la charla que di el año pasado en esta conferencia). Pero también aplicaría a la Composition Api de Vue o a Suspense de React.
 
@@ -57,7 +51,7 @@ He hecho esta pequeña introducción sobre la fatiga para intentar que todos ten
 
 Por qué?
 
-Básicamente porque vengo a hablar sobre un tema que puede causar un poco de fatiga. Vengo a hablar sobre Deno, una librería que podría calificarse como la primera competencia sería de Node.
+Básicamente porque vengo a hablar sobre un tema que puede causar un poco de fatiga. Vengo a hablar sobre Deno, una librería que podría calificarse como la primera competencia seria de Node.
 
 Esto es algo serio. Node es algo que cualquier desarrollador de JavaScript utiliza a diario. Da igual que hagas backend, frontend, aplicaciones de escritorio o simplemente utilices un editor de código escrito en JavaScript. De manera directa o indirecta estoy seguro de que todos los que estamos aquí reunidos utilizamos Node a diario.
 
@@ -77,7 +71,7 @@ Ryan Dahl creó Node en 2009. Su objetivo principal era crear sevidores http.
 
 Ryan dejo Node en 2012. Pensaba que Go es un mejor lenguaje de programación para crear servidores web y dejó de utilizar Node.
 
-Haber utilizado Go durante estos últimos años ha influenciado muchas de las decisiones de diseño. Por ejemplo, la std de Deno está muy influenciada por la de Go. Subcomandos como `deno fmt` también vienen inspirados por Go. Incluso la primera versión de Deno estaba implementada en Go, pero finalmente está siendo implementado en Go.
+Haber utilizado Go durante estos últimos años ha influenciado muchas de las decisiones de diseño. Por ejemplo, la std de Deno está muy influenciada por la de Go. Subcomandos como `deno fmt` también vienen inspirados por Go. Incluso la primera versión de Deno estaba implementada en Go, pero finalmente está siendo implementado en Rust.
 
 # 10 things he regret about Node
 
@@ -354,3 +348,7 @@ Las funcionalidades propias de Deno están dentro de la variable global `Deno`. 
 # How does this work internally
 
 # Benchmarks
+
+
+
+# Feedback vendetianos
